@@ -1,0 +1,29 @@
+# config.yaml
+city: "Hyderabad, India"
+hotspots: 2000
+h3_resolution: 7  # H3 resolution for geospatial calculations
+
+num_drivers: 5
+steps_per_epoch: 150       # 1 step = 1 minute → 150 minutes (~2.5 hours)
+epochs: 2                   # 3 epochs
+insight_interval: 15        # Generate insights every 15 minutes
+demand_rate_per_step: 5000   # 150 new demands per step (minute)
+max_trip_distance: 5000     # Max pickup distance in meters (~5km)
+num_demands: 5000           # Total demands to generate
+
+optimization:
+  lambda: 1               # Weight for offline vs. online objective. 1 for offline, 0 for online
+  alpha: 0.0001             # Revenue scaling factor
+  p_range: [0, 1]           # Range for probability of affinity of driver to the assignment
+  s_range: [1, 2]           # Range for surge multiplier
+  r_range: [0, 10000]       # Range for driver revenue
+  M_min: 8                  # Minimum zone coverage
+  beta: 0.8                 # Base coverage fraction
+  gamma: 0.5                # Surge sensitivity
+  max_grid_distance: 1  # Max distance for grid assignment in disk
+
+visualization:
+  animate: false            # Set to true to display animation
+  save: true                # Set to true to save animation
+  filename: "driver_animation.gif"
+  interval: 300             # Animation interval in milliseconds

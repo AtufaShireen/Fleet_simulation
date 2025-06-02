@@ -1,0 +1,17 @@
+hyderabad_graph.pkl
+hyderabad_India_graph.pkl
+simulation.log
+visualization_v1.py
+visualization_v2.py
+# Ignore  cache files
+__pycache__/
+cache/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore virtual environment directories
+venv/
+# Ignore data files
+save_results/
+.DS_Store
+# Ignore Python bytecode files
+*.pyc
